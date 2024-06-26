@@ -1,0 +1,13 @@
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .birth-year-range {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+  

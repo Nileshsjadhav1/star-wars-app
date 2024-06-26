@@ -1,0 +1,12 @@
+.mat-table {
+  width: 100%;
+}
+
+.mat-cell, .mat-header-cell {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}

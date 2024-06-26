@@ -1,0 +1,27 @@
+<div class="form-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Movie</mat-label>
+    <mat-select id="movie" [(ngModel)]="filterCriteria.movie" (ngModelChange)="applyFilter()">
+      <mat-option value="">All</mat-option>
+      <mat-option *ngFor="let movie of movies" [value]="movie.url">{{ movie.title }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Species</mat-label>
+    <mat-select id="species" [(ngModel)]="filterCriteria.species" (ngModelChange)="applyFilter()">
+      <mat-option value="">All</mat-option>
+      <mat-option *ngFor="let species of speciesList" [value]="species.url">{{ species.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="birth-year-range">
+    <mat-form-field appearance="fill">
+      <mat-label>Birth Year Range</mat-label>
+      <input matInput id="birthYearRangeStart" [(ngModel)]="filterCriteria.birthYearRange.start" (ngModelChange)="applyFilter()" placeholder="Start">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <input matInput id="birthYearRangeEnd" [(ngModel)]="filterCriteria.birthYearRange.end" (ngModelChange)="applyFilter()" placeholder="End">
+    </mat-form-field>
+  </div>
+</div>
